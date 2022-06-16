@@ -14,6 +14,8 @@ MiAirPurifier2S = function(platform, config) {
     Characteristic = platform.Characteristic;
     UUIDGen = platform.UUIDGen;
 
+    this.address=config.ip
+
     var that = this;
 
     this.device = {
@@ -518,9 +520,9 @@ MiAirPurifier2STemperatureAccessory.prototype.getServices = function() {
 
     var infoService = new Service.AccessoryInformation();
     infoService
-        .setCharacteristic(Characteristic.Manufacturer, "XiaoMi")
+        .setCharacteristic(Characteristic.Manufacturer, "Lumi United Technology Co., Ltd.")
         .setCharacteristic(Characteristic.Model, "AirPurifier2S")
-        .setCharacteristic(Characteristic.SerialNumber, "Undefined");
+        .setCharacteristic(Characteristic.SerialNumber, this.address);
     services.push(infoService);
     
     var temperatureService = new Service.TemperatureSensor(this.name);
