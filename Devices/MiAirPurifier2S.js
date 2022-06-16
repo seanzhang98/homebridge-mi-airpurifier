@@ -14,7 +14,7 @@ MiAirPurifier2S = function(platform, config) {
     Characteristic = platform.Characteristic;
     UUIDGen = platform.UUIDGen;
 
-    this.address = config.ip;
+    this.address = this.config['ip'];
 
     var that = this;
 
@@ -129,7 +129,7 @@ MiAirPurifier2SAirPurifierAccessory.prototype.getServices = function() {
     var infoService = new Service.AccessoryInformation();
     infoService
         .setCharacteristic(Characteristic.Manufacturer, "Lumi United Technology Co., Ltd.")
-        .setCharacteristic(Characteristic.Model, "AirPurifier2S")
+        .setCharacteristic(Characteristic.Model, "Air Purifier 2S")
         .setCharacteristic(Characteristic.SerialNumber, this.address);
     services.push(infoService);
 
