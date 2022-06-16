@@ -1,6 +1,6 @@
 {
-  "name": "homebridge-xiaomi-air-purifier",
-  "version": "1.0.0",
+  "name": "homebridge-xiaomi-air-purifier-collection",
+  "version": "1.0.1",
   "description": "XiaoMi air purifier plugins for HomeBridge(https://github.com/nfarina/homebridge).",
   "keywords": [
     "homebridge-plugin",
